@@ -1,7 +1,7 @@
 VERSION 5.00
 Begin VB.Form Form2 
-   BorderStyle     =   4  '°íÁ¤ µµ±¸ Ã¢
-   Caption         =   "Ã£±â"
+   BorderStyle     =   4  'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Ã¢
+   Caption         =   "Ã£ï¿½ï¿½"
    ClientHeight    =   930
    ClientLeft      =   45
    ClientTop       =   285
@@ -12,7 +12,7 @@ Begin VB.Form Form2
    ScaleHeight     =   930
    ScaleWidth      =   3435
    ShowInTaskbar   =   0   'False
-   StartUpPosition =   3  'Windows ±âº»°ª
+   StartUpPosition =   3  'Windows ï¿½âº»ï¿½ï¿½
    Begin VB.TextBox Text2 
       Height          =   270
       Left            =   30
@@ -21,7 +21,7 @@ Begin VB.Form Form2
       Width           =   3375
    End
    Begin VB.CheckBox Check1 
-      Caption         =   "´ë/¼Ò¹®ÀÚ ±¸ºÐ"
+      Caption         =   "ï¿½ï¿½/ï¿½Ò¹ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½"
       Height          =   285
       Left            =   90
       TabIndex        =   2
@@ -29,7 +29,7 @@ Begin VB.Form Form2
       Width           =   2085
    End
    Begin VB.CommandButton Command1 
-      Caption         =   "¹Ù²Ù±â"
+      Caption         =   "ï¿½Ù²Ù±ï¿½"
       Height          =   285
       Left            =   2220
       TabIndex        =   1
@@ -54,6 +54,7 @@ On Error GoTo ErrFind
 If FindReplace = False Then
     If FindText <> "" Then
         If Check1.Value = 0 Then
+            'Hello1
             FindStartPos = InStr(FindStartPos + 1, StrConv(frmMain.txtText, vbLowerCase), StrConv(FindText, vbLowerCase))
             FindEndPos = InStr(FindStartPos, StrConv(frmMain.txtText, vbLowerCase), StrConv(Right(FindText, 1), vbLowerCase))
         Else

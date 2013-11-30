@@ -5,31 +5,32 @@ Attribute VB_Name = "modMain"
 ' DateTime  : 2012-10-20 21:41
 ' Author    : YJSoft
 ' Purpose   : Y's Notepad SE Main Module
+'Hello2
 '---------------------------------------------------------------------------------------
 'Y's Notepad SE V.0.8
-'Á¦ÀÛ:À¯¿µÀç(yyj9411@naver.com)
+'ï¿½ï¿½ï¿½ï¿½:ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½(yyj9411@naver.com)
 'All rights RESERVED. :-)
 
-'¾÷µ¥ÀÌÆ® ·Î±×
-'12/6:ÇÁ·Î±×·¥ ¾ÈÁ¤È­ ÀÛ¾÷
-'12/12:·Î±× ÆÄÀÏ È®ÀåÀÚ txt¿¡¼­ dat·Î º¯°æ, ·Î±× ÆÄÀÏ ÀÌ¸§ »ó¼öÈ­(³ªÁß¿¡ ¼öÁ¤ÇÏ±â ÆíÇÏ°Ô)
-'2012/3/8:½ºÇÃ·¡½Ã Æû Ã³À½¿¡ Ç¥½Ã ºñÈ°¼ºÈ­,Logsave RTF ÄÁÆ®·Ñ »èÁ¦(Á÷Á¢ open¹®À¸·Î ¿­¾î¼­ ÀÛ¾÷)
+'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® ï¿½Î±ï¿½
+'12/6:ï¿½ï¿½ï¿½Î±×·ï¿½ ï¿½ï¿½ï¿½ï¿½È­ ï¿½Û¾ï¿½
+'12/12:ï¿½Î±ï¿½ ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½ï¿½ txtï¿½ï¿½ï¿½ï¿½ datï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½, ï¿½Î±ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½ ï¿½ï¿½ï¿½ï¿½È­(ï¿½ï¿½ï¿½ß¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï±ï¿½ ï¿½ï¿½ï¿½Ï°ï¿½)
+'2012/3/8:ï¿½ï¿½ï¿½Ã·ï¿½ï¿½ï¿½ ï¿½ï¿½ Ã³ï¿½ï¿½ï¿½ï¿½ Ç¥ï¿½ï¿½ ï¿½ï¿½È°ï¿½ï¿½È­,Logsave RTF ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½(ï¿½ï¿½ï¿½ï¿½ openï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½î¼­ ï¿½Û¾ï¿½)
 'MsgBox "frm"
 Public MRUStr(5) As String
-Public Dirty As Boolean 'ÆÄÀÏÀÌ º¯°æµÇ¾ú´ÂÁö ¿©ºÎ¸¦ ÀúÀåÇÏ´Â º¯¼öÀÔ´Ï´Ù.
-Public insu As String '¸í·ÉÁÙ ÀÎ¼ö Ã³¸®¿ë º¯¼öÀÔ´Ï´Ù.
-Public FileName_File As String 'ÆÄÀÏ ÀÌ¸§À» ÀúÀåÇÏ´Â º¯¼öÀÔ´Ï´Ù.
-Public FileName_Dir As String 'ÆÄÀÏ °æ·Î¸¦ ÀúÀåÇÏ´Â º¯¼öÀÔ´Ï´Ù.
-Public Newfile As Boolean '»õ ÆÄÀÏÀÎÁö ¿©ºÎ¸¦ ÀúÀåÇÏ´Â º¯¼öÀÔ´Ï´Ù.
-Public Username As String '»ç¿ëÀÚ ÀÌ¸§À» ÀúÀåÇÏ´Â º¯¼öÀÔ´Ï´Ù.
-Public TitleMode As Byte 'Å¸ÀÌÆ² Ç¥½Ã ¸ðµå¸¦ ÀúÀåÇÏ´Â º¯¼öÀÔ´Ï´Ù.
-Public IsAboutbox As Boolean '½ºÇÃ·¡½Ã ÆûÀÌ ÃÊ±â ½ÇÇàÀÎÁö, ¸Þ´º-Á¤º¸ ·ÎÀÇ ½ÇÇàÀÎÁö¸¦ ±¸º°ÇÏ´Â º¯¼ö
+Public Dirty As Boolean 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ç¾ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.
+Public insu As String 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Î¼ï¿½ Ã³ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.
+Public FileName_File As String 'ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.
+Public FileName_Dir As String 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.
+Public Newfile As Boolean 'ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.
+Public Username As String 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.
+Public TitleMode As Byte 'Å¸ï¿½ï¿½Æ² Ç¥ï¿½ï¿½ ï¿½ï¿½ï¿½å¸¦ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô´Ï´ï¿½.
+Public IsAboutbox As Boolean 'ï¿½ï¿½ï¿½Ã·ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ê±ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½Þ´ï¿½-ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½
 Public NewLogFile As Boolean
-Public Const PROGRAM_TITLE = "Y's Notepad SE Beta(V." 'ÇÁ·Î±×·¥ ±âº» Å¸ÀÌÆ²
-Public Const PROGRAM_NAME = "Y's Notepad SE" 'ÇÁ·Î±×·¥ ÀÌ¸§
-Public Const PROGRAM_KEY = "YNotepadSE" 'ÇÁ·Î±×·¥ ÄÚµå
-Public Const LAST_UPDATED = "2013-09-17(2)" '¸¶Áö¸· ¾÷µ¥ÀÌÆ® ³¯Â¥
-Public Const LOGFILE = "log.dat" '·Î±× ÆÄÀÏ ÀÌ¸§
+Public Const PROGRAM_TITLE = "Y's Notepad SE Beta(V." 'ï¿½ï¿½ï¿½Î±×·ï¿½ ï¿½âº» Å¸ï¿½ï¿½Æ²
+Public Const PROGRAM_NAME = "Y's Notepad SE" 'ï¿½ï¿½ï¿½Î±×·ï¿½ ï¿½Ì¸ï¿½
+Public Const PROGRAM_KEY = "YNotepadSE" 'ï¿½ï¿½ï¿½Î±×·ï¿½ ï¿½Úµï¿½
+Public Const LAST_UPDATED = "2013-09-17(2)" 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½Â¥
+Public Const LOGFILE = "log.dat" 'ï¿½Î±ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½
 Public Const PROGRAM_HELPFILE = "\YNOTEPADSE.chm"
 Public Const DEBUG_VERSION = True
 Public FindStartPos As Integer
@@ -40,8 +41,8 @@ Public Lang As Boolean
 Public UTF8_Error As Boolean
 'Public Const YJSoft = "YJSoft"
 Public IsAboveNT As Boolean
-'¿©±âºÎÅÍ´Â ÇÁ·Î±×·¥¿ë ¼±¾ð
-Public Declare Function ShellAbout Lib "shell32.dll" Alias "ShellAboutA" (ByVal hwnd As Long, ByVal szApp As String, ByVal szOtherStuff As String, ByVal hIcon As Long) As Long 'Á¤º¸ ´ëÈ­ »óÀÚÀÇ ¼±¾ð
+'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í´ï¿½ ï¿½ï¿½ï¿½Î±×·ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+Public Declare Function ShellAbout Lib "shell32.dll" Alias "ShellAboutA" (ByVal hwnd As Long, ByVal szApp As String, ByVal szOtherStuff As String, ByVal hIcon As Long) As Long 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È­ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 Public Declare Function SetFocus Lib "user32.dll" (ByVal hwnd As Long) As Long
 Public Declare Function SetForegroundWindow Lib "user32" (ByVal hwnd As Long) As Long
 Public Declare Sub Sleep Lib "kernel32.dll" (ByVal deMiliseconds As Long)
@@ -124,7 +125,7 @@ Dim i As Integer
 For i = 1 To 5
 If MRUStr(i) = "" Then
     frmdta.mnuMRU(i).Enabled = False
-    frmdta.mnuMRU(i).Caption = "(ÆÄÀÏ ¾øÀ½)"
+    frmdta.mnuMRU(i).Caption = "(ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½)"
 Else
 frmdta.mnuMRU(i).Caption = MRUStr(i)
 frmdta.mnuMRU(i).Enabled = True
@@ -152,11 +153,11 @@ Dim i As Integer
    On Error GoTo AddMRU_Error
 
 For i = 1 To 5
-    If MRUSting = MRUStr(i) Then Exit Sub 'Áßº¹ ÆÄÀÏÀº ±â·ÏÇÏÁö ¾Ê´Â´Ù
+    If MRUSting = MRUStr(i) Then Exit Sub 'ï¿½ßºï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê´Â´ï¿½
 Next i
 intindex = CInt(GetSetting(PROGRAM_KEY, "MRU", "Index", 0))
 Select Case intindex
-Case 0 '»õ·Î ¸¸µç´Ù
+Case 0 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 SaveSetting PROGRAM_KEY, "MRU", "Index", 1
 SaveSetting PROGRAM_KEY, "MRU", "1", MRUSting
 Case 1
@@ -222,7 +223,7 @@ End Sub
 ' Purpose   :
 '---------------------------------------------------------------------------------------
 '
-Public Function EnCrypt(ByRef sString As String) As String '¾ÏÈ£È­
+Public Function EnCrypt(ByRef sString As String) As String 'ï¿½ï¿½È£È­
     Dim n As Long, nKey As Byte
    On Error GoTo EnCrypt_Error
 
@@ -248,7 +249,7 @@ End Function
 ' Purpose   :
 '---------------------------------------------------------------------------------------
 '
-Public Function DeCrypt(ByRef sHexString As String) As String 'º¹È£È­
+Public Function DeCrypt(ByRef sHexString As String) As String 'ï¿½ï¿½È£È­
    On Error GoTo DeCrypt_Error
 
 If Right(sHexString, 2) = vbCrLf Then
@@ -319,12 +320,12 @@ End Function
 ' Purpose   :
 '---------------------------------------------------------------------------------------
 '
-Function FindWon(findstr As String) As Integer '¹®Àå ³»¿¡¼­ \ÀÇ À§Ä¡¸¦ Ã£¾Æ³»¾î ±× ´ÙÀ½ À§Ä¡¸¦ ¹ÝÈ¯ÇÏ´Â ÇÔ¼öÀÔ´Ï´Ù. \°¡ ¾ø´Ù¸é 0ÀÌ ¹ÝÈ¯µË´Ï´Ù.
+Function FindWon(findstr As String) As Integer 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ \ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ Ã£ï¿½Æ³ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ ï¿½ï¿½È¯ï¿½Ï´ï¿½ ï¿½Ô¼ï¿½ï¿½Ô´Ï´ï¿½. \ï¿½ï¿½ ï¿½ï¿½ï¿½Ù¸ï¿½ 0ï¿½ï¿½ ï¿½ï¿½È¯ï¿½Ë´Ï´ï¿½.
 Dim i As Integer
 Dim tempstr As String * 1
    On Error GoTo FindWon_Error
 
-If findstr = "Á¦¸ñ ¾øÀ½" And Newfile = True Then
+If findstr = "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½" And Newfile = True Then
     FindWon = 0
     Exit Function
 End If
@@ -333,11 +334,11 @@ For i = Len(findstr) To 1 Step -1
     'Mklog "modMain.FindWon.tempstr = " & tempstr
     If tempstr = "\" Then
         FindWon = i
-        'Mklog "modMain.FindWon - " & Chr(34) & "\" & Chr(34) & "À§Ä¡ Ã£À½(" & i & ")"
+        'Mklog "modMain.FindWon - " & Chr(34) & "\" & Chr(34) & "ï¿½ï¿½Ä¡ Ã£ï¿½ï¿½(" & i & ")"
         Exit Function
     End If
 Next
-'Mklog "modMain.FindWon - ¹®Àå ¾È¿¡ " & Chr(34) & "\" & Chr(34) & "°¡ ¾øÀ½."
+'Mklog "modMain.FindWon - ï¿½ï¿½ï¿½ï¿½ ï¿½È¿ï¿½ " & Chr(34) & "\" & Chr(34) & "ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½."
 FindWon = 0
 
    On Error GoTo 0
@@ -349,15 +350,15 @@ FindWon_Error:
 End Function
 
 '####################################################################
-'#######################UpdateFileName ÇÔ¼ö##########################
-'###################Á¦ÀÛ:À¯¿µÀç(yyj9411@naver.com)###################
-'###############################ÀÎ¼ö#################################
-'###############1)Form-Á¦¸ñÀ» ¹Ù²Ü ÆûÀÇ ÀÌ¸§#########################
-'###############2)FileName-ÆÄÀÏÀÇ ÀÌ¸§(°æ·Î Æ÷ÇÔ)####################
-'#####################»ç¿ëÇÏ´Â ¿ÜºÎ º¯¼ö/»ó¼ö########################
-'###############1)TitleMode-Á¦¸ñ ¼­½Ä ¹ÝÈ¯(1,2,3,4)##################
-'#####################2)PROGRAM_TITLE(»ó¼ö)##########################
-'########################»ç¿ëÇÏ´Â ¿ÜºÎ ÇÔ¼ö##########################
+'#######################UpdateFileName ï¿½Ô¼ï¿½##########################
+'###################ï¿½ï¿½ï¿½ï¿½:ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½(yyj9411@naver.com)###################
+'###############################ï¿½Î¼ï¿½#################################
+'###############1)Form-ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ù²ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½#########################
+'###############2)FileName-ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½(ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½)####################
+'#####################ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½Üºï¿½ ï¿½ï¿½ï¿½ï¿½/ï¿½ï¿½ï¿½ï¿½########################
+'###############1)TitleMode-ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¯(1,2,3,4)##################
+'#####################2)PROGRAM_TITLE(ï¿½ï¿½ï¿½ï¿½)##########################
+'########################ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½Üºï¿½ ï¿½Ô¼ï¿½##########################
 '###########################1)FindWon################################
 '####################################################################
 '---------------------------------------------------------------------------------------
@@ -372,7 +373,7 @@ Dim i As Integer
    On Error GoTo UpdateFileName_Error
 
 Select Case TitleMode
-Case 1 'ÆÄÀÏ ÀÌ¸§°ú °æ·Î°¡ ¸Ç µÚ¿¡
+Case 1 'ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î°ï¿½ ï¿½ï¿½ ï¿½Ú¿ï¿½
     'If FileName = "" Then
     '    Form.Caption = PROGRAM_TITLE & App.Major & "." & App.Minor & "." & App.Revision & ")"
     '    App.Title = PROGRAM_TITLE & App.Major & "." & App.Minor & "." & App.Revision & ")"
@@ -380,7 +381,7 @@ Case 1 'ÆÄÀÏ ÀÌ¸§°ú °æ·Î°¡ ¸Ç µÚ¿¡
         Form.Caption = PROGRAM_TITLE & App.Major & "." & App.Minor & "." & App.Revision & ")" & " - " & FileName
         App.Title = PROGRAM_TITLE & App.Major & "." & App.Minor & "." & App.Revision & ")" & " - " & FileName
     'End If
-Case 2 'ÆÄÀÏ ÀÌ¸§°ú °æ·Î°¡ ¸Ç ¾Õ¿¡
+Case 2 'ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î°ï¿½ ï¿½ï¿½ ï¿½Õ¿ï¿½
     'If FileName = "" Then
     '    Form.Caption = PROGRAM_TITLE & App.Major & "." & App.Minor & "." & App.Revision & ")"
     '    App.Title = PROGRAM_TITLE & App.Major & "." & App.Minor & "." & App.Revision & ")"
@@ -388,7 +389,7 @@ Case 2 'ÆÄÀÏ ÀÌ¸§°ú °æ·Î°¡ ¸Ç ¾Õ¿¡
         Form.Caption = FileName & " - " & PROGRAM_TITLE & App.Major & "." & App.Minor & "." & App.Revision & ")"
         App.Title = FileName & " - " & PROGRAM_TITLE & App.Major & "." & App.Minor & "." & App.Revision & ")"
     'End If
-Case 3 'ÆÄÀÏ ÀÌ¸§ÀÌ ¸Ç µÚ¿¡
+Case 3 'ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ú¿ï¿½
     'If FileName = "" Then
     '    Form.Caption = PROGRAM_TITLE & App.Major & "." & App.Minor & "." & App.Revision & ")"
     '    App.Title = PROGRAM_TITLE & App.Major & "." & App.Minor & "." & App.Revision & ")"
@@ -396,12 +397,12 @@ Case 3 'ÆÄÀÏ ÀÌ¸§ÀÌ ¸Ç µÚ¿¡
         If Not Len(FileName) <= 1 Then
             i = FindWon(FileName)
             FileName_File = Mid(FileName, i + 1, Len(FileName) - i)
-            Mklog "ÆÄÀÏ ÀÌ¸§ ÃßÃâ - " & FileName_File
+            Mklog "ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½ ï¿½ï¿½ï¿½ï¿½ - " & FileName_File
             Form.Caption = PROGRAM_TITLE & App.Major & "." & App.Minor & "." & App.Revision & ")" & " - " & FileName_File
             App.Title = PROGRAM_TITLE & App.Major & "." & App.Minor & "." & App.Revision & ")" & " - " & FileName_File
         End If
     'End If
-Case 4 'ÆÄÀÏ ÀÌ¸§ÀÌ ¸Ç ¾Õ¿¡
+Case 4 'ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Õ¿ï¿½
     'If FileName = "" Then
     '    Form.Caption = PROGRAM_TITLE & App.Major & "." & App.Minor & "." & App.Revision & ")"
     '    App.Title = PROGRAM_TITLE & App.Major & "." & App.Minor & "." & App.Revision & ")"
@@ -409,20 +410,20 @@ Case 4 'ÆÄÀÏ ÀÌ¸§ÀÌ ¸Ç ¾Õ¿¡
         If Not Len(FileName) <= 1 Then
             i = FindWon(FileName)
             FileName_File = Mid(FileName, i + 1, Len(FileName) - i)
-            Mklog "ÆÄÀÏ ÀÌ¸§ ÃßÃâ - " & FileName_File
+            Mklog "ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½ ï¿½ï¿½ï¿½ï¿½ - " & FileName_File
             Form.Caption = FileName_File & " - " & PROGRAM_TITLE & App.Major & "." & App.Minor & "." & App.Revision & ")"
             App.Title = FileName_File & " - " & PROGRAM_TITLE & App.Major & "." & App.Minor & "." & App.Revision & ")"
         End If
     'End If
-Case 5 'ÆÄÀÏ ÀÌ¸§¸¸-º£Å¸!
+Case 5 'ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½ï¿½ï¿½-ï¿½ï¿½Å¸!
     'If FileName = "" Then
-    '    Form.Caption = "Á¦¸ñ ¾øÀ½"
-    '    App.Title = "Á¦¸ñ ¾øÀ½"
+    '    Form.Caption = "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½"
+    '    App.Title = "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½"
     'Else
         If Not Len(FileName) <= 1 Then
             i = FindWon(FileName)
             FileName_File = Mid(FileName, i + 1, Len(FileName) - i)
-            Mklog "ÆÄÀÏ ÀÌ¸§ ÃßÃâ - " & FileName_File
+            Mklog "ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½ ï¿½ï¿½ï¿½ï¿½ - " & FileName_File
             Form.Caption = FileName_File ' & " - " & PROGRAM_TITLE & App.Major & "." & App.Minor & "." & App.Revision & ")"
             App.Title = FileName_File ' & " - " & PROGRAM_TITLE & App.Major & "." & App.Minor & "." & App.Revision & ")"
         End If
@@ -449,8 +450,8 @@ Dim a
 
 On Error GoTo n
 a = FileLen(ChkFile)
-If a > 1000000 Then '·Î±× ÆÄÀÏ ¿ë·®ÀÌ ³Ê¹« Å©´Ù!
-    Mklog 1 '·Î±× ÆÄÀÏ ÃÊ±âÈ­
+If a > 1000000 Then 'ï¿½Î±ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ë·®ï¿½ï¿½ ï¿½Ê¹ï¿½ Å©ï¿½ï¿½!
+    Mklog 1 'ï¿½Î±ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ê±ï¿½È­
 End If
 FileCheck = True
 Exit Function
@@ -467,17 +468,17 @@ FileCheck_Error:
 End Function
 '#######################################################################
 '###############################Sub Main()##############################
-'###################Á¦ÀÛ:À¯¿µÀç(yyj9411@naver.com)######################
+'###################ï¿½ï¿½ï¿½ï¿½:ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½(yyj9411@naver.com)######################
 '#######################################################################
 Sub Main()
 'Dim temp As String * 4
-'MRU ºÒ·¯¿È
+'MRU ï¿½Ò·ï¿½ï¿½ï¿½
 ChkMRU
 IsAboveNT = False
-Mklog "O/S Á¤º¸" & vbCrLf & fGetWindowVersion
-Mklog "Åõ¸íÈ­ Áö¿ø ¿©ºÎ - " & IsAboveNT
+Mklog "O/S ï¿½ï¿½ï¿½ï¿½" & vbCrLf & fGetWindowVersion
+Mklog "ï¿½ï¿½ï¿½ï¿½È­ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ - " & IsAboveNT
 'temp = GetSetting(PROGRAM_KEY, "Install", "Language", Korean_1)
-'If temp = "English" Then Lang = True '¿µ¹® ½ÇÇà ¸ðµå(º£Å¸!)
+'If temp = "English" Then Lang = True 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½(ï¿½ï¿½Å¸!)
 If Val(GetSetting(PROGRAM_KEY, "Program", "Notepad", 0)) Then
     Shell "C:\Windows\notepad.exe " & Command(), vbNormalFocus
     End
@@ -487,35 +488,35 @@ On Error GoTo Err_Main
 If Not FileCheck(AppPath & "\" & LOGFILE) Then
     NewLogFile = True
 End If
-TitleMode = GetSetting(PROGRAM_KEY, "Option", "Title", 99) 'Å¸ÀÌÆ² ¼­½ÄÀ» ºÒ·¯¿É´Ï´Ù.
-If TitleMode = 99 Then '±âº»°ª- Ã³À½ ½ÇÇàÇÑ´Ù
+TitleMode = GetSetting(PROGRAM_KEY, "Option", "Title", 99) 'Å¸ï¿½ï¿½Æ² ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ò·ï¿½ï¿½É´Ï´ï¿½.
+If TitleMode = 99 Then 'ï¿½âº»ï¿½ï¿½- Ã³ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½
     SaveSetting PROGRAM_KEY, "Option", "Title", 4
     TitleMode = 4
 End If
 If Not Lang Then
-    Load frmMain '¸ÞÀÎ ÆûÀ» ºÒ·¯µéÀÎ´Ù.
+    Load frmMain 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ò·ï¿½ï¿½ï¿½ï¿½Î´ï¿½.
     frmMain.Top = GetSetting(PROGRAM_KEY, "Window", "X", Screen.Height / 2)
     frmMain.Left = GetSetting(PROGRAM_KEY, "Window", "Y", Screen.Width / 2)
     frmMain.Width = GetSetting(PROGRAM_KEY, "Window", "Width", 8000)
     frmMain.Height = GetSetting(PROGRAM_KEY, "Window", "Height", 7000)
-    If Val(GetSetting(PROGRAM_KEY, "Window", "ÃÖ´ëÈ­")) Then
+    If Val(GetSetting(PROGRAM_KEY, "Window", "ï¿½Ö´ï¿½È­")) Then
         frmMain.WindowState = 2
     End If
 Else
     MsgBox "English Execute Mode is under construction. Sorry :(", vbInformation, "Y's Notepad SE English Team :)"
     End
 End If
-If Not Command() = "" Then '¸í·ÉÁÙ ÀÎ¼ö°¡ ÀÖ´Ù!
+If Not Command() = "" Then 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Î¼ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½!
     If Command() = "/nodebug" Then GoTo debugmode
-    Mklog "¸í·ÉÁÙ ÀÎ¼ö °¨Áö(" & Command() & ")"
-    If Left(Command(), 1) = Chr(34) Then '¸í·ÉÁÙ ÀÎ¼ö¿¡ "°¡ ÀÖ´Ù!(ÆÄÀÏ ÀÌ¸§ or °æ·Î¿¡ ºóÄ­ÀÌ ÀÖÀ¸¸é µû¿ÈÇ¥·Î °¨½ÎÁ®¼­ ÆÄÀÏ ÀÌ¸§ÀÌ µé¾î¿È.
-                                         'ÇÏÁö¸¸ ¿ì¸° ÇÊ¿ä ¾ø´Ù! °í·Î »èÁ¦!
+    Mklog "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Î¼ï¿½ ï¿½ï¿½ï¿½ï¿½(" & Command() & ")"
+    If Left(Command(), 1) = Chr(34) Then 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Î¼ï¿½ï¿½ï¿½ "ï¿½ï¿½ ï¿½Ö´ï¿½!(ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½ or ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½ï¿½Ä­ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ç¥ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.
+                                         'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ì¸° ï¿½Ê¿ï¿½ ï¿½ï¿½ï¿½ï¿½! ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½!
         insu = Mid(Command(), 2, Len(Command()) - 2)
-        Mklog "¸í·ÉÁÙ ÀÎ¼ö Ã³¸®(" & insu & ")" 'Ã³¸®µÈ ÆÄÀÏ °æ·Î ·Î±ë
+        Mklog "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Î¼ï¿½ Ã³ï¿½ï¿½(" & insu & ")" 'Ã³ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Î±ï¿½
     Else
-    insu = Command() '¸í·ÉÁÙ ÀÎ¼ö¿¡ "°¡ ¾ø´Ù!(±×´ë·Î ºÒ·¯µéÀÓ)
+    insu = Command() 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Î¼ï¿½ï¿½ï¿½ "ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½!(ï¿½×´ï¿½ï¿½ï¿½ ï¿½Ò·ï¿½ï¿½ï¿½ï¿½ï¿½)
     End If
-'frmMain.RTF.FileName = insu 'ÆÄÀÏ ºÒ·¯µéÀÌ±â!
+'frmMain.RTF.FileName = insu 'ï¿½ï¿½ï¿½ï¿½ ï¿½Ò·ï¿½ï¿½ï¿½ï¿½Ì±ï¿½!
 Dim FreeFileNum As Integer
 FreeFileNum = FreeFile
 Open insu For Input As #FreeFileNum
@@ -523,12 +524,12 @@ Newfile = False
 frmMain.txtText.Text = StrConv(InputB(LOF(FreeFileNum), FreeFileNum), vbUnicode)
 Close #FreeFileNum
 FileName_Dir = insu
-frmMain.CD1.FileName = FileName_Dir '¹ö±× ¿øÀÎ #1
-UpdateFileName frmMain, FileName_Dir 'Å¸ÀÌÆ² º¯°æ(ÆÄÀÏ ÀÌ¸§À¸·Î..)
-AddMRU insu 'ÃÖ±Ù ¿¬ ÆÄÀÏ¿¡ Ãß°¡
+frmMain.CD1.FileName = FileName_Dir 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ #1
+UpdateFileName frmMain, FileName_Dir 'Å¸ï¿½ï¿½Æ² ï¿½ï¿½ï¿½ï¿½(ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½ï¿½ï¿½ï¿½ï¿½..)
+AddMRU insu 'ï¿½Ö±ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½Ï¿ï¿½ ï¿½ß°ï¿½
 Dirty = False
 Else
-    Newfile = True '»õ ÆÄÀÏÀÓ
+    Newfile = True 'ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     frmMain.CD1.FileName = ""
 End If
 
@@ -538,22 +539,22 @@ If GetSetting(PROGRAM_KEY, "Option", "Toolbar", False) Then
     frmMain.tbTools.Visible = True
 Else
     frmMain.tbTools.Visible = False
-    frmMain.mnuToolbar.Caption = "Åø¹Ù º¸ÀÌ±â(&B)"
+    frmMain.mnuToolbar.Caption = "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ì±ï¿½(&B)"
 End If
 frmMain.Show
 Exit Sub
 
 Err_Main:
 If Err.Number = 75 Then
-    MsgBox "ÆÄÀÏ " & insu & vbCrLf & "À» Ã£À» ¼ö ¾ø½À´Ï´Ù!", vbCritical, "¸í·ÉÁÙ ÀÎ¼ö ÆÄ½Ì ¿À·ù"
-    Mklog "#ÆÄÀÏ ¿­±â ¿À·ù - ¸í·ÉÁÙ ÀÎ¼ö Ã³¸® ½ÇÆÐ" & vbCrLf & "ÆÄÀÏ¸í:" & insu
+    MsgBox "ï¿½ï¿½ï¿½ï¿½ " & insu & vbCrLf & "ï¿½ï¿½ Ã£ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½!", vbCritical, "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Î¼ï¿½ ï¿½Ä½ï¿½ ï¿½ï¿½ï¿½ï¿½"
+    Mklog "#ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ - ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Î¼ï¿½ Ã³ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½" & vbCrLf & "ï¿½ï¿½ï¿½Ï¸ï¿½:" & insu
     Err.Clear
 Else
-    MsgBox "Ã³¸®µÇÁö ¾ÊÀº ¿À·ù°¡ ¹ß»ýµÇ¾ú½À´Ï´Ù!" & vbCrLf & "¿À·ùÄÚµå:" & Err.Number & vbCrLf & Err.Description, vbCritical, "Ä¡¸íÀûÀÎ ¿À·ù"
+    MsgBox "Ã³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ß»ï¿½ï¿½Ç¾ï¿½ï¿½ï¿½ï¿½Ï´ï¿½!" & vbCrLf & "ï¿½ï¿½ï¿½ï¿½ï¿½Úµï¿½:" & Err.Number & vbCrLf & Err.Description, vbCritical, "Ä¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½"
     Mklog Err.Number & "/" & Err.Description & "/" & insu
     Err.Clear
 End If
-frmMain.txtText.Text = "" 'ÅØ½ºÆ® ³»¿ë Á¦°Å
+frmMain.txtText.Text = "" 'ï¿½Ø½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 frmMain.CD1.FileName = ""
 GetUserName
 frmMain.Show
@@ -573,14 +574,14 @@ Public Sub GetUserName()
    On Error GoTo GetUserName_Error
 
 Username = GetSetting(PROGRAM_KEY, "Program", "User", "")
-If Username = "" Then '»ç¿ëÀÚ ÀÌ¸§À» µî·ÏÇÒ±î?
-    If MsgBox("µî·ÏµÈ »ç¿ëÀÚ ÀÌ¸§ÀÌ ¾ø½À´Ï´Ù! µî·ÏÇÏ½Ã°Ú½À´Ï±î?", vbYesNo, "»ç¿ëÀÚ µî·Ï") = vbYes Then
-        Username = InputBox("»ç¿ëÀÚ ÀÌ¸§À» ÀÔ·ÂÇØ ÁÖ¼¼¿ä. ÀÔ·ÂÇÏÁö ¾ÊÀ»½Ã" & vbCrLf & Chr(34) & "(¾Ë ¼ö ¾øÀ½)" & Chr(34) & "·Î µî·ÏµË´Ï´Ù.", "»ç¿ëÀÚ µî·Ï", "", Screen.Width / 2, Screen.Height / 2)
+If Username = "" Then 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ò±ï¿½?
+    If MsgBox("ï¿½ï¿½ï¿½Ïµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½! ï¿½ï¿½ï¿½ï¿½ï¿½Ï½Ã°Ú½ï¿½ï¿½Ï±ï¿½?", vbYesNo, "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½") = vbYes Then
+        Username = InputBox("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½ï¿½ ï¿½Ö¼ï¿½ï¿½ï¿½. ï¿½Ô·ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" & vbCrLf & Chr(34) & "(ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½)" & Chr(34) & "ï¿½ï¿½ ï¿½ï¿½ï¿½ÏµË´Ï´ï¿½.", "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½", "", Screen.Width / 2, Screen.Height / 2)
         If Username = "" Then
-            Username = "(¾Ë ¼ö ¾øÀ½)"
+            Username = "(ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½)"
         End If
     Else
-    Username = "(¾Ë ¼ö ¾øÀ½)"
+    Username = "(ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½)"
     End If
 SaveSetting PROGRAM_KEY, "Program", "User", Username
 End If
@@ -606,7 +607,7 @@ Dim FreeFileNum As Integer
 If NewLogFile Then
     FreeFileNum = FreeFile
     Open AppPath & "\" & LOGFILE For Output As #FreeFileNum
-        Print #FreeFileNum, Now() & " - " & "·Î±× ÆÄÀÏÀÌ »ý¼ºµÇ¾ú½À´Ï´Ù."
+        Print #FreeFileNum, Now() & " - " & "ï¿½Î±ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ç¾ï¿½ï¿½ï¿½ï¿½Ï´ï¿½."
         Print #FreeFileNum, Now() & " - " & LogStr
     Close #FreeFileNum
     NewLogFile = False
@@ -616,16 +617,16 @@ FreeFileNum = FreeFile
 If Val(LogStr) = 1 Then
     FreeFileNum = FreeFile
     Open AppPath & "\" & LOGFILE For Output As #FreeFileNum
-        Print #FreeFileNum, Now() & " - " & "·Î±× ÆÄÀÏÀÌ ÃÊ±âÈ­µÇ¾ú½À´Ï´Ù."
+        Print #FreeFileNum, Now() & " - " & "ï¿½Î±ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê±ï¿½È­ï¿½Ç¾ï¿½ï¿½ï¿½ï¿½Ï´ï¿½."
     Close #FreeFileNum
     NewLogFile = False
     Exit Sub
 End If
 Open AppPath & "\" & LOGFILE For Append As #FreeFileNum
-If Right(LogStr, 1) = "\" Then 'logstr ³¡¿¡ \°¡ ÀÖÀ¸¸é ½Ã°£Ãâ·Â Á¦¿Ü,log.dat¿¡ Ãâ·Â¾ÈÇÔ
+If Right(LogStr, 1) = "\" Then 'logstr ï¿½ï¿½ï¿½ï¿½ \ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ã°ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½,log.datï¿½ï¿½ ï¿½ï¿½ï¿½Â¾ï¿½ï¿½ï¿½
     LogStr = Left(LogStr, Len(LogStr) - 1)
     Debug.Print LogStr
-Else '¾øÀ¸¸é ½Ã°£ Ãâ·Â
+Else 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ã°ï¿½ ï¿½ï¿½ï¿½ï¿½
     Debug.Print Now() & " - " & LogStr
     If DEBUG_VERSION Then
         'frmMain.logsave.Text = frmMain.logsave.Text & Now() & " - " & LogStr & vbCrLf
@@ -665,52 +666,52 @@ AppPath_Error:
     MsgBox "Error " & Err.Number & " (" & Err.Description & ") in procedure AppPath of Module modMain"
 End Function
 '#######################################################################
-'###########################SaveCheck ÇÔ¼ö##############################
-'##############ÆÄÀÏÀ» ÀúÀåÇÒ °ÍÀÎÁö¸¦ ¹¯´Â ÇÔ¼öÀÔ´Ï´Ù.##################
-'###################Á¦ÀÛ:À¯¿µÀç(yyj9411@naver.com)######################
-'###############################ÀÎ¼ö####################################
-'###############1)Ritf-¸®Ä¡ ÅØ½ºÆ® ¹Ú½º ÄÁÆ®·ÑÀÇ ÀÌ¸§###################
-'###############2)Cd-°øÅë ´ëÈ­»óÀÚ ÄÁÆ®·ÑÀÇ ÀÌ¸§########################
-'###########¹ÝÈ¯°ª(True-ÇÔ¼ö ½ÇÇà ¿Ï·á/False-ÇÔ¼ö ½ÇÇà Ãë¼Ò#############
+'###########################SaveCheck ï¿½Ô¼ï¿½##############################
+'##############ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ô¼ï¿½ï¿½Ô´Ï´ï¿½.##################
+'###################ï¿½ï¿½ï¿½ï¿½:ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½(yyj9411@naver.com)######################
+'###############################ï¿½Î¼ï¿½####################################
+'###############1)Ritf-ï¿½ï¿½Ä¡ ï¿½Ø½ï¿½Æ® ï¿½Ú½ï¿½ ï¿½ï¿½Æ®ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½###################
+'###############2)Cd-ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È­ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Æ®ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½########################
+'###########ï¿½ï¿½È¯ï¿½ï¿½(True-ï¿½Ô¼ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ï·ï¿½/False-ï¿½Ô¼ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½#############
 '#######################################################################
 Public Function SaveCheck(Cd As CommonDialog) As Boolean
 On Error Resume Next
 Dim Respond As VbMsgBoxResult
-Respond = MsgBox("ÆÄÀÏÀÌ º¯°æµÇ¾ú½À´Ï´Ù." & vbCrLf & "ÀúÀåÇÏ½Ã°Ú½À´Ï±î?", vbExclamation + vbYesNoCancel, "ÆÄÀÏ º¯°æ")
-If Respond = vbYes Then 'ÀúÀåÇÑ´Ù
-    If FileName_Dir = "Á¦¸ñ ¾øÀ½" Then
-        '¿­·ÁÁø ÆÄÀÏÀÌ ¾ø´Ù(»õ ÆÄÀÏÀÌ´Ù)
-        Cd.Filter = "ÅØ½ºÆ® ÆÄÀÏ|*.txt|¸ðµç ÆÄÀÏ|*.*" 'ÆÄÀÏ ¿­±â ´ëÈ­»óÀÚ ÇÃ·¡±× ¼³Á¤
-        Cd.CancelError = True 'Ãë¼Ò½Ã ¿À·ù(32755)
-        Cd.ShowSave '´ëÈ­»óÀÚ Ç¥½Ã
-        If Err.Number = 32755 Then 'Ãë¼Ò°¡ ´­·ÁÁ³´Ù!
-            Cd.FileName = "" 'ÀÔ·ÂµÈ ÆÄÀÏ ÃÊ±âÈ­
+Respond = MsgBox("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ç¾ï¿½ï¿½ï¿½ï¿½Ï´ï¿½." & vbCrLf & "ï¿½ï¿½ï¿½ï¿½ï¿½Ï½Ã°Ú½ï¿½ï¿½Ï±ï¿½?", vbExclamation + vbYesNoCancel, "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½")
+If Respond = vbYes Then 'ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½
+    If FileName_Dir = "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½" Then
+        'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½(ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ì´ï¿½)
+        Cd.Filter = "ï¿½Ø½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½|*.txt|ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½|*.*" 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È­ï¿½ï¿½ï¿½ï¿½ ï¿½Ã·ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+        Cd.CancelError = True 'ï¿½ï¿½ï¿½Ò½ï¿½ ï¿½ï¿½ï¿½ï¿½(32755)
+        Cd.ShowSave 'ï¿½ï¿½È­ï¿½ï¿½ï¿½ï¿½ Ç¥ï¿½ï¿½
+        If Err.Number = 32755 Then 'ï¿½ï¿½ï¿½Ò°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½!
+            Cd.FileName = "" 'ï¿½Ô·Âµï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ê±ï¿½È­
             Err.Clear
-            Mklog "»ç¿ëÀÚ°¡ ÀúÀå Ãë¼Ò"
+            Mklog "ï¿½ï¿½ï¿½ï¿½ï¿½Ú°ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½"
             SaveCheck = False
-            Exit Function 'ÇÁ·Î½ÃÀú ½ÇÇà Á¾·á(»ç¿ëÀÚ°¡ Ãë¼ÒÇÔ)
+            Exit Function 'ï¿½ï¿½ï¿½Î½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½(ï¿½ï¿½ï¿½ï¿½ï¿½Ú°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½)
         End If
-        If Err.Number = 13 Then 'Çü½ÄÀÌ ¸ÂÁö ¾Ê´Ù!
-            Cd.FileName = "" '¿­·ÁÁø ÆÄÀÏ ÃÊ±âÈ­
+        If Err.Number = 13 Then 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ê´ï¿½!
+            Cd.FileName = "" 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ê±ï¿½È­
             Err.Clear
-            Mklog "¶Ç Çü½ÄÀÌ ¸ÂÁö ¾Ê´Ü´Ù!!!\"
-            Mklog "¹ö±×´Ù ¹ö±×!!!\"
-            MsgBox "ÁË¼ÛÇÕ´Ï´Ù. ÇÁ·Î±×·¥¿¡¼­ Àß¸øµÈ ¸í·ÉÀ» ¼öÇàÇÏ¿© ÀÛ¾÷ÀÌ Áß´ÜµË´Ï´Ù...", vbCritical, "Ä¡¸íÀûÀÎ ¿À·ù"
+            Mklog "ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ê´Ü´ï¿½!!!\"
+            Mklog "ï¿½ï¿½ï¿½×´ï¿½ ï¿½ï¿½ï¿½ï¿½!!!\"
+            MsgBox "ï¿½Ë¼ï¿½ï¿½Õ´Ï´ï¿½. ï¿½ï¿½ï¿½Î±×·ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ß¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ ï¿½Û¾ï¿½ï¿½ï¿½ ï¿½ß´ÜµË´Ï´ï¿½...", vbCritical, "Ä¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½"
             SaveCheck = False
-            Exit Function 'ÇÁ·Î½ÃÀú ½ÇÇà Á¾·á(¹ö±×)
+            Exit Function 'ï¿½ï¿½ï¿½Î½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½(ï¿½ï¿½ï¿½ï¿½)
         End If
         If Not Err.Number = 0 Then
-            MsgBox "¿À·ù ¹ß»ý!" & vbCrLf & "¿À·ù ¹øÈ£:" & Err.Number & vbCrLf & Err.Description, vbCritical, "¿À·ù!"
+            MsgBox "ï¿½ï¿½ï¿½ï¿½ ï¿½ß»ï¿½!" & vbCrLf & "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È£:" & Err.Number & vbCrLf & Err.Description, vbCritical, "ï¿½ï¿½ï¿½ï¿½!"
             Mklog Err.Number & "/" & Err.Description
             SaveCheck = False
             Exit Function
         End If
     Else
-        Cd.FileName = FileName_Dir 'ÀÌ¹Ì ¿­·ÁÁø ÆÄÀÏÀÌ ÀÖ´Ù-¿­·ÁÁø ÆÄÀÏ ÀÌ¸§À» Cd.filename¿¡ ´ëÀÔ
+        Cd.FileName = FileName_Dir 'ï¿½Ì¹ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½-ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½ï¿½ï¿½ Cd.filenameï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
     End If
-    Mklog "ÆÄÀÏ ÀúÀå(" & Cd.FileName & ")" '·Î±× ³²±è(µð¹ö±×)
+    Mklog "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½(" & Cd.FileName & ")" 'ï¿½Î±ï¿½ ï¿½ï¿½ï¿½ï¿½(ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½)
     'frmMain.RTF.Text = frmMain.txtText.Text
-    'Ritf.SaveFile Cd.FileName, rtfText 'ÆÄÀÏ ÀúÀå Ã³¸®
+    'Ritf.SaveFile Cd.FileName, rtfText 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Ã³ï¿½ï¿½
     'frmMain.txtText.Text
     Dim FreeFileNum As Integer
     FreeFileNum = FreeFile
@@ -720,7 +721,7 @@ If Respond = vbYes Then 'ÀúÀåÇÑ´Ù
     Close #FreeFileNum
     Screen.MousePointer = 0
     If Not Err.Number = 0 Then
-        MsgBox "¿À·ù ¹ß»ý!" & vbCrLf & "¿À·ù ¹øÈ£:" & Err.Number & vbCrLf & Err.Description, vbCritical, "¿À·ù!"
+        MsgBox "ï¿½ï¿½ï¿½ï¿½ ï¿½ß»ï¿½!" & vbCrLf & "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È£:" & Err.Number & vbCrLf & Err.Description, vbCritical, "ï¿½ï¿½ï¿½ï¿½!"
         Mklog Err.Number & "/" & Err.Description
         Err.Clear
         SaveCheck = False
@@ -735,6 +736,6 @@ Else
     SaveCheck = False
 End If
 End Function
-Public Sub ¹Ì±¸Çö()
+Public Sub ï¿½Ì±ï¿½ï¿½ï¿½()
 
 End Sub
